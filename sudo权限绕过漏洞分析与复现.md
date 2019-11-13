@@ -19,7 +19,7 @@
 
 * 命令 ：sudo -V
 
-![Image and Preview Themes on the toolbar](https://markdownmonster.west-wind.com/docs/images/EditorPreviewThemeUi.png) 
+![Image and Preview Themes on the toolbar](https://github.com/AD-0x1A/sudo-/blob/master/picture/1.png) 
 
 * 可以看到，sudo版本为1.8.27，可以实现sudo权限绕过漏洞的复现
 
@@ -27,13 +27,13 @@
 
 * 命令 ： （1）useradd cn001（添加用户）（2）passwd cn001（设置用户密码）
 
-![Image and Preview Themes on the toolbar](https://markdownmonster.west-wind.com/docs/images/EditorPreviewThemeUi.png) 
+![Image and Preview Themes on the toolbar](https://github.com/AD-0x1A/sudo-/blob/master/picture/2.png) 
 
 ### 3、修改/etc/sudoers文件
 
 * leafpad  /etc/sudoers（打开/etc/sudoers）
 * 添加 cn001 ALL=(ALL,!root) ALL
-![Image and Preview Themes on the toolbar](https://markdownmonster.west-wind.com/docs/images/EditorPreviewThemeUi.png) 
+![Image and Preview Themes on the toolbar](https://github.com/AD-0x1A/sudo-/blob/master/picture/3.png) 
 * 1.其中的cn001表示用户名 
 * 2.第一个ALL表示允许该用户在任意机器或者终端中使用sudo
 * 3.括号里面的（ALL,!root）表示命令可以被除了root以外的任意用户身份去执行
@@ -41,7 +41,7 @@
 
 ### 4、实现sudo权限绕过
 
-![Image and Preview Themes on the toolbar](https://markdownmonster.west-wind.com/docs/images/EditorPreviewThemeUi.png) 
+![Image and Preview Themes on the toolbar](https://github.com/AD-0x1A/sudo-/blob/master/picture/4.png) 
 
 * 可以看到，cn001用户本身无权以root身份执行id命令
 * 但是，-u#-1 将用户uid改为0，即为root，所以用户可以在无root密码的情况下执行root命令
